@@ -1,11 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AppService } from './shared/app.service';
+import { AppSettingService } from './shared/setting.service';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    selector: 'adminlte-root',
+    templateUrl: './app.component.html'
 })
-export class AppComponent
+
+export class AppComponent implements OnInit, AfterViewInit
 {
-    title = 'app';
+    private appSvc: AppService;
+    private setSvc: AppSettingService;
+
+    public constructor(appSvc: AppService, setSvc: AppSettingService)
+    {
+        this.appSvc = appSvc;
+        this.setSvc = setSvc;
+    }
+
+    public ngOnInit(): void
+    {
+        // this.scriptSvc.loadCompScript('AppComponent');
+    }
+
+    public ngAfterViewInit(): void
+    {
+        this.appSvc.Init();
+        this.setSvc.Init();
+    }
 }
