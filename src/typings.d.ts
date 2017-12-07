@@ -1,6 +1,10 @@
 /* SystemJS module definition */
 declare var module: NodeModule;
 declare var Morris: any;
+declare var $: any;
+declare var JQuery: any;
+declare var jQuery: any;
+declare var moment: any;
 
 interface NodeModule
 {
@@ -25,7 +29,9 @@ interface JQuery
     sparkline: any;
     datepicker: any;
     knob: any;
-    tooltip: any;
+    tooltip(): any;
+    widget; any;
+    ui: any;
 }
 
 interface JQueryStatic

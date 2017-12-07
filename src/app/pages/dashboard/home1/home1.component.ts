@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Home1Service } from './home1.service';
 
+
 @Component({
     selector: 'adminlte-home1',
     templateUrl: './home1.component.html'

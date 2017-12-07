@@ -13,7 +13,6 @@
 */
 
 import { Injectable } from '@angular/core';
-import * as $ from 'jquery';
 
 @Injectable()
 export class AppService
@@ -52,7 +51,7 @@ export class AppService
     *         or add [data-widget="box-refresh"] to the box element
     *         Pass any option as data-option="value"
     */
-    private AddAJAXContent(): any
+    public AddAJAXContent(): any
     {
         'use strict';
 
@@ -138,7 +137,7 @@ export class AppService
             return this.each(function ()
             {
                 const $this = $(this);
-                let data = $this.data(DataKey);
+                let data: any = $this.data(DataKey);
 
                 if (!data)
                 {
@@ -146,7 +145,7 @@ export class AppService
                     $this.data(DataKey, (data = new BoxRefresh($this, options)));
                 }
 
-                if (typeof data === 'string')
+                if (typeof option === 'string')
                 {
                     if (typeof data[option] === 'undefined')
                     {
@@ -191,7 +190,7 @@ export class AppService
     *         This plugin auto activates on any element using the `.box` class
     *         Pass any option as data-option="value"
     */
-    private AddsBoxWidget(): any
+    public AddsBoxWidget(): any
     {
         'use strict';
 
@@ -330,7 +329,7 @@ export class AppService
             return this.each(function ()
             {
                 const $this = $(this);
-                let data = $this.data(DataKey);
+                let data: any = $this.data(DataKey);
 
                 if (!data)
                 {
@@ -381,7 +380,7 @@ export class AppService
     *         or add [data-toggle="control-sidebar"] to the trigger
     *         Pass any option as data-option="value"
     */
-    private ControlSidebar(): any
+    public ControlSidebar(): any
     {
         'use strict';
 
@@ -538,7 +537,7 @@ export class AppService
     * @Usage: $('#my-chat-box').directChat()
     *         or add [data-widget="direct-chat"] to the trigger
     */
-    private DirectChat(): any
+    public DirectChat(): any
     {
         'use strict';
 
@@ -616,7 +615,7 @@ export class AppService
      *        Configure any options by passing data-option="value"
      *        to the body tag.
      */
-    private Layout(): any
+    public Layout(): any
     {
         'use strict';
 
@@ -772,7 +771,7 @@ export class AppService
             return this.each(function ()
             {
                 const $this = $(this);
-                let data = $this.data(DataKey);
+                let data: any = $this.data(DataKey);
 
                 if (!data)
                 {
@@ -821,7 +820,7 @@ export class AppService
      *          or add [data-toggle="push-menu"] to any button
      *          Pass any option as data-option="value"
      */
-    private PushMenu(): any
+    public PushMenu(): any
     {
         'use strict';
 
@@ -1030,7 +1029,7 @@ export class AppService
      *         or add [data-widget="todo-list"] to the ul element
      *         Pass any option as data-option="value"
      */
-    private TodoList(): any
+    public TodoList(): any
     {
         'use strict';
 
@@ -1105,7 +1104,7 @@ export class AppService
             return this.each(function ()
             {
                 const $this = $(this);
-                let data: JQuery<HTMLElement> = $this.data(DataKey);
+                let data: any = $this.data(DataKey);
 
                 if (!data)
                 {
@@ -1113,7 +1112,7 @@ export class AppService
                     $this.data(DataKey, (data = new TodoList($this, options)));
                 }
 
-                if (typeof data === 'string')
+                if (typeof option === 'string')
                 {
                     if (typeof data[option] === 'undefined')
                     {
@@ -1160,7 +1159,7 @@ export class AppService
      *         or add [data-widget="tree"] to the ul element
      *         Pass any option as data-option="value"
      */
-    private Tree(): any
+    public Tree(): any
     {
         'use strict';
 
