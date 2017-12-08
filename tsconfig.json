@@ -10,7 +10,8 @@
         "target": "es5",
         "types": [
             "jquery",
-            "moment"
+            "moment",
+            "chartjs"
         ],
         "typeRoots": [
             "node_modules/@types"
